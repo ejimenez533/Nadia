@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Nad 🌙💙</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #0b3d91, #000); /* Cielo nocturno */
+            color: white;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Estrellas animadas */
+        .star {
+            position: absolute;
+            background: white;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            opacity: 0;
+            animation: twinkle 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.3); }
+        }
+
+        /* Luna flotante */
+        .moon {
+            position: absolute;
+            top: 10%;
+            left: 80%;
+            width: 310px;
+            height: 310px;
+            background: url('https://cdn.pixabay.com/photo/2012/04/18/12/09/moon-36858_1280.png');
+            background-size: cover;
+            border-radius: 50%;
+            box-shadow: 0 0 40px rgba(255, 255, 200, 0.9);
+            animation: floatMoon 5s infinite alternate ease-in-out;
+        }
+
+        @keyframes floatMoon {
+            0% { transform: translateY(-10px); }
+            100% { transform: translateY(10px); }
+        }
+
+        /* Botón con efecto brillante */
+        button {
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 25px;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 10px #ff99cc;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #ff33aa;
+        }
+
+        /* Aparición suave del mensaje */
+        #pregunta {
+            font-size: 24px;
+            color: #ff0066;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 1.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .visible {
+            opacity: 1 !important;
+            transform: scale(1) !important;
+        }
+
+        /* GIF de Flores Animadas - Múltiples y Grandes */
+        .flores-gif {
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            animation: aparecer 4s forwards ease-in-out 2s; /* forwards mantiene el estado final */
+        }
+
+        /* Posiciones diferentes para las flores */
+        .flor1 { left: 10%; width: 210px; }  
+        .flor2 { left: 15%; width: 190px; }  
+        .flor3 { left: 25%; width: 260px; }  
+        .flor4 { left: 35%; width: 230px; }  
+        .flor5 { left: 45%; width: 240px; }  
+        .flor6 { left: 50%; width: 260px; } /* Nueva flor a la derecha */
+        .flor7 { left: 68%; width: 210px; } /* Nueva flor a la derecha */
+        .flor8 { left: 70%; width: 190px; } /* Nueva flor a la derecha */
+
+        @keyframes aparecer {
+            0% { opacity: 0; transform: translateY(50px) scale(1.0); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Estrellas aleatorias -->
+    <script>
+        for (let i = 0; i < 100; i++) {
+            let star = document.createElement("div");
+            star.classList.add("star");
+            document.body.appendChild(star);
+            star.style.left = Math.random() * 100 + "vw";
+            star.style.top = Math.random() * 100 + "vh";
+            star.style.animationDuration = Math.random() * 3 + 2 + "s";
+        }
+    </script>
+
+    <!-- Luna realista -->
+    <div class="moon"></div>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <h1>Para la niña mas Hermosa 💙</h1>
+        <p>Han pasado seis años desde que nuestras vidas se cruzaron</p>
+        <p>y aunque el destino nos separó, siempre supe que algo profundo nos unia</p>
+      	<p>Hoy, Dios nos permite coincidir  nuevamente</p>
+      	<p>y no importa la distancia, porque el sabe porque hace las cosas.</p>
+        <p>Desde el primer momento supe que eras alguien muy especial</p>
+      	<p>Hoy confirmo que eres el amor de mi vida </p>
+      	<p>Y quiero decirte algo muy importante</p>
+        <button onclick="mostrarPregunta()">Haz clic aquí 💘</button>
+        <br />
+        <h2 id="pregunta">¿Quieres ser mi novia? ❤️</h2>
+    </div>
+
+    <!-- Varias imágenes GIF de Flores Creciendo -->
+    <img src="https://cdn.pixabay.com/animation/2024/11/11/10/49/10-49-14-708_512.gif" class="flores-gif flor1">
+    <img src="https://cdn.pixabay.com/animation/2024/11/11/10/49/10-49-14-708_512.gif" class="flores-gif flor2">
+    <img src="https://cdn.pixabay.com/animation/2024/11/11/10/49/10-49-14-708_512.gif" class="flores-gif flor3">
+    <img src="https://cdn.pixabay.com/animation/2024/11/11/10/49/10-49-14-708_512.gif" class="flores-gif flor4">
+    <img src="https://cdn.pixabay.com/animation/2024/11/11/10/49/10-49-14-708_512.gif" class="flores-gif flor5">
+    <img src="https://cdn.pixabay.com/animation/2024/11/11/10/49/10-49-14-708_512.gif" class="flores-gif flor6">
+    <img src="https://cdn.pixabay.com/animation/2024/11/11/10/49/10-49-14-708_512.gif" class="flores-gif flor7">
+    <img src="https://cdn.pixabay.com/animation/2024/11/11/10/49/10-49-14-708_512.gif" class="flores-gif flor8">
+  
+  <!-- Audio -->
+    <audio autoplay loop>
+        <source src="todo.mp3" type="audio/mpeg">
+        
+    </audio>
+
+    <script>
+        function mostrarPregunta() {
+            document.getElementById("pregunta").classList.add("visible");
+        }
+    </script>
+
+</body>
+</html>
